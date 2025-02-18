@@ -1,0 +1,99 @@
+/* 📋 Table Container */
+.lead-list-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #e3f2fd; /* Light Blue */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 📌 Table Title */
+  .table-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  /* 🔍 Search Box */
+  .search-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* 📊 Custom Table */
+  .custom-table {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* 🏷 Table Header */
+  th.mat-header-cell {
+    background-color: #0d47a1 !important;
+    color: white !important;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* 📊 Table Row */
+  tr.mat-row {
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+  
+  /* 🔄 Hover Effect */
+  tr.mat-row:hover {
+    background-color: #f1f8ff;
+  }
+  
+
+  /* 🔍 Search Box - Light Gray Placeholder */
+.search-box input::placeholder {
+  color: #b0b0b0 !important; /* Light Gray */
+  font-style: italic;
+}
+
+/* 🏷 Improve Padding for Items per Page Dropdown */
+.mat-paginator-page-size {
+  padding: 10px !important;
+}
+
+/* 🌟 Better Styling for the Paginator */
+.mat-paginator {
+  background-color: white;
+  padding: 12px; /* Add spacing */
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 📊 Custom Table Styling */
+.custom-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 📌 Table Header */
+th.mat-header-cell {
+  background-color: #0d47a1 !important;
+  color: white !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+/* 📊 Table Row */
+tr.mat-row {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+/* 🔄 Hover Effect */
+tr.mat-row:hover {
+  background-color: #f1f8ff;
+}
+

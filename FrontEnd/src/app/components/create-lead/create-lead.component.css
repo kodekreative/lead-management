@@ -1,0 +1,77 @@
+/* 🌟 Form Container */
+.lead-form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 25px;
+  background-color: #e3f2fd; /* Light Blue Background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 Form Title */
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d47a1; /* Deep Blue */
+  margin-bottom: 20px;
+}
+
+/* 🌟 Custom Input Fields */
+.custom-input {
+  border-radius: 8px !important;
+}
+
+.custom-input input {
+  padding-left: 12px !important; /* Adds left padding to placeholder */
+}
+
+/* 🌟 Full-width fields */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* 🌟 Error Messages */
+.error-message {
+  color: red !important;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* 🌟 Checkbox Style */
+.checkbox-style {
+  display: block;
+  margin-top: 15px;
+  color: #0d47a1; /* Deep Blue */
+}
+
+/* 🌟 Custom Button */
+.custom-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #0d47a1 !important; /* Blue Theme */
+  color: white !important;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #1565c0 !important; /* Lighter Blue on Hover */
+}
+
+/* 🌟 Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 🌟 Error Messages - Now Always Red */
+mat-error {
+  color: red !important;
+  font-size: 13px;
+  font-weight: bold;
+}

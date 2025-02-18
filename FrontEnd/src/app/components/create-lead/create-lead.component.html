@@ -1,0 +1,57 @@
+<mat-card class="lead-form-container">
+  <mat-card-title class="form-title">🚀 Create a New Lead</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="leadForm" (ngSubmit)="onSubmit()" class="lead-form">
+      
+      <!-- Name -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Enter your name" required />
+        <mat-error *ngIf="leadForm.controls['name'].invalid && leadForm.controls['name'].touched">
+          <span class="error-message">⚠ Name is required</span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Phone -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" placeholder="(123) 456-7890" required />
+        <mat-error *ngIf="leadForm.controls['phone'].invalid && leadForm.controls['phone'].touched">
+          ⚠ Invalid phone format (123) 456-7890
+        </mat-error>
+      </mat-form-field>
+      
+      
+      <!-- ZIP Code -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>ZIP Code</mat-label>
+        <input matInput formControlName="zipCode" placeholder="12345 or 12345-6789" required />
+        <mat-error *ngIf="leadForm.controls['zipCode'].invalid && leadForm.controls['zipCode'].touched">
+          <span class="error-message">⚠ Invalid ZIP Code format</span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter your email" required />
+        <mat-error *ngIf="leadForm.controls['email'].invalid && leadForm.controls['email'].touched">
+          <span class="error-message">⚠ Invalid email format</span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Permission to Contact -->
+      <mat-checkbox formControlName="permissionToContact" class="checkbox-style">
+        I give permission to be contacted
+      </mat-checkbox>
+
+      <!-- Submit Button -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" class="custom-button" [disabled]="!isFormValid()">
+          🚀 Create Lead
+        </button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>

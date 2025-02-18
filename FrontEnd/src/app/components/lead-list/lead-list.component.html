@@ -1,0 +1,54 @@
+<mat-card class="lead-list-container">
+  <mat-card-title class="table-title">📋 Lead List</mat-card-title>
+  <mat-card-content>
+
+    <!-- Search Input -->
+    <mat-form-field appearance="outline" class="search-box">
+      <mat-label>Search Leads</mat-label>
+      <input matInput (keyup)="applyFilter($event)">
+    </mat-form-field>
+
+    <!-- Material Table -->
+    <table mat-table [dataSource]="dataSource" matSort class="custom-table">
+      
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let lead">{{ lead.id }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let lead">{{ lead.name }}</td>
+      </ng-container>
+
+      <!-- Phone Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Phone</th>
+        <td mat-cell *matCellDef="let lead">{{ lead.phone }}</td>
+      </ng-container>
+
+      <!-- ZIP Code Column -->
+      <ng-container matColumnDef="zipCode">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ZIP Code</th>
+        <td mat-cell *matCellDef="let lead">{{ lead.zipCode }}</td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+        <td mat-cell *matCellDef="let lead">{{ lead.email }}</td>
+      </ng-container>
+
+      <!-- Table Header & Rows -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <!-- Pagination -->
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+  </mat-card-content>
+</mat-card>
